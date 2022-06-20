@@ -1,0 +1,75 @@
+﻿@model IEnumerable<RentalCar.Models.Locacao>
+
+@{
+    ViewData["Title"] = "Locação";
+}
+
+<h1>Locações</h1>
+
+<p>
+    <a asp-action="Create">Nova Locação</a>
+</p>
+@if (TempData["message"] != null)
+{
+    <div class="alert-info"><strong>@TempData["message"]</strong></div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carro.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Diaria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataLocacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiasLocacao)
+            </th>            
+            <th>
+                @Html.DisplayNameFor(model => model.ValorSeguro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.observacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carro.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diaria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLocacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiasLocacao)
+            </td>            
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorSeguro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.observacao)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Alterar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<RentalCar.Models.Cidade>
+
+@{
+    ViewData["Title"] = "Cidades";
+}
+
+<h1>Cidades</h1>
+
+<p>
+    <a asp-action="Create">Nova Cidade</a>
+</p>
+@if (TempData["message"] != null)
+{
+    <div class="alert-info"><strong>@TempData["message"]</strong></div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado.Nome)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Alterar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhar</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

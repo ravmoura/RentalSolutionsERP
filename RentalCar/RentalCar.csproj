@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\.cs" />
+    <Compile Remove="Data\Class.cs" />
+    <Compile Remove="Models\MVCContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Controllers\CidadesController.cs~RF6eaa62.TMP" />
+    <None Remove="Controllers\ClientesController.cs~RF1ee1e14.TMP" />
+    <None Remove="Controllers\EstadosController.cs~RF4517e78.TMP" />
+    <None Remove="Models\Cliente.cs~RF14cdded.TMP" />
+    <None Remove="Models\Cliente.cs~RF16da5f5.TMP" />
+    <None Remove="Models\Cliente.cs~RF1861592.TMP" />
+    <None Remove="Models\Cliente.cs~RF18dbc30.TMP" />
+    <None Remove="Models\Cliente.cs~RF193b55d.TMP" />
+    <None Remove="Models\Cliente.cs~RF1e6a702.TMP" />
+    <None Remove="Models\Cliente.cs~RF28cca9f.TMP" />
+    <None Remove="Models\Cliente.cs~RF2a2b3e0.TMP" />
+    <None Remove="Models\Cliente.cs~RF4f99848.TMP" />
+    <None Remove="Models\Cliente.cs~RF60407ae.TMP" />
+    <None Remove="Models\Cliente.cs~RFe0a97d.TMP" />
+    <None Remove="Models\Locacao.cs~RF1bf6572.TMP" />
+    <None Remove="Models\Locacao.cs~RF6987fd.TMP" />
+    <None Remove="Models\Locacao.cs~RF6c521a.TMP" />
+    <None Remove="Views\Cidades\Create.cshtml~RF40795f.TMP" />
+    <None Remove="Views\Clientes\Delete.cshtml~RF14cd17a.TMP" />
+    <None Remove="Views\Clientes\Details.cshtml~RF14cdc67.TMP" />
+    <None Remove="Views\Clientes\Details.cshtml~RF21de8a3.TMP" />
+    <None Remove="Views\Clientes\Edit.cshtml~RF14cd89e.TMP" />
+    <None Remove="Views\Clientes\Edit.cshtml~RF18e2bc3.TMP" />
+    <None Remove="Views\Clientes\Edit.cshtml~RF21de855.TMP" />
+    <None Remove="Views\Clientes\Edit.cshtml~RF2768c2a.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\jquery-mask\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.5" />
+  </ItemGroup>
+
+</Project>
